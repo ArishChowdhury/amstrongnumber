@@ -1,32 +1,29 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
 
 public class Main {
-    public static void isAmStrong(int number){
-        // step 1: Find the number of digits
-        int digits = (String.valueOf(number)).length();
-        int answer = 0;
-        for (int i = 0; i < ; i++) {
-            
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the Nth term: ");
+        int n = scanner.nextInt();
+
+        int a = 0, b = 1;
+        int sum = a + b;
+
+
+        int count = 2;
+
+
+        while (count < n) {
+            int next = a + b;
+            sum += next;
+            b = next;
+            count++;
         }
 
 
-    }
-    public static void main(String[] args) {
-        isAmStrong(232);
-
-
-
+        System.out.println("Sum of Fibonacci series up to term " + n + " is: " + sum);
     }
 }
-
-
-
-
-
-
-
-
-
 
 
